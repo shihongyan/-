@@ -17,7 +17,7 @@ public class test1 {
     /*判断是否是回文数字*/
     public static Boolean palindromic(int x){
         int [] map=new int[(int)(Math.log10(x)+1)];
-        for(int i=100000;i>0;i/=10){
+        for(int i=(int)Math.pow(10,((int)Math.log10(x)));i>0;i/=10){
             int a=x/i;
             map[(map.length-1)-(int)Math.log10(i)]=a;
             x=x-a*i;
@@ -28,6 +28,22 @@ public class test1 {
                 bool=false;
         }
         return bool;
+    }
+    /*计算最大公因数*/
+    public static int factor(int a,int b){
+            int x=a%b;
+            if(x!=0){
+                while(x!=0){
+                    x=a%b;
+                    a=b;
+                    b=x;
+                }
+                return a;
+            }else
+                return b;
+
+
+
     }
     public static void main(String [] args){
         /**test1
@@ -91,5 +107,13 @@ public class test1 {
         }
     }
     System.out.println("最大的回文数字："+flag);*/
+        /**
+         * test5 最小倍数
+        int x=1;
+    for(int i=1;i<20;i++){
+        int xx=factor(i,x);
+        x=i*x/xx;
+    }
+    System.out.println(x);*/
     }
 }
