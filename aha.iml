@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/algorithm_23" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/Algorithm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/leetcode" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
