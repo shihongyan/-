@@ -24,7 +24,7 @@ public class test22_2 {
     }
     public static void main(String [] args){
         File file=new File("/home/260198/文档/22/test.txt");
-        String [] str=textio(file).trim().split("[ ,!?]");
+        String [] str=textio(file).trim().split("[ ,!?]+");
         Set<String> set=new TreeSet<String>();
         Map<String,Integer> map=new HashMap<String,Integer>();
         for(int i=0;i<str.length;i++){

@@ -6,7 +6,7 @@ public class test_24_4 {
     /*定义变量*/
     private static Sum sumx=new Sum();
     /*闭锁需要等待的线程数量*/
-    private  static  CountDownLatch count = new CountDownLatch(20);
+    //private  static  CountDownLatch count = new CountDownLatch(20);
     public static void main(String [] args)throws Exception{
         /*创建100个线程*/
         //ExecutorService executorService= Executors.newFixedThreadPool(100);
@@ -19,7 +19,8 @@ public class test_24_4 {
          * 或者仅添加以下代码
          * while(!executorService.isTerminated()){}
          */
-        count.await();
+        while(!executorService.isTerminated()){}
+        //count.await();
         System.out.println("主线程打印消息："+sumx.getSum());
     }
 
@@ -30,7 +31,7 @@ public class test_24_4 {
                 sumx.add(1);
                 System.out.println("子线程打印消息："+sumx.sum);
                 /*每结束一个线程count中的数量就会减1*/
-                count.countDown();
+                //count.countDown();
             }
         }
     }

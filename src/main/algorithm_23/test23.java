@@ -64,33 +64,34 @@ public class test23 {
     public static void main(String [] args){
         long time0=System.currentTimeMillis();
         /*初始数组元素*/
-        int [] arr= {1,2,3,4,5,6,7};
+        int array[] = {6,1,5,4,8,3,9,12,51,11,15,14,13,25,69,47,56,74,26,78};
+        //int [] arr= {1,2,3,4,5,6,7};
         /*冒泡排序*/
-        for(int j=0;j<arr.length;j++){
-            for(int i=0;i<arr.length-j-1;i++){
-                if(arr[i]>arr[i+1]){
-                    int x=arr[i];
-                    arr[i]=arr[i+1];
-                    arr[i+1]=x;
+        for(int j=0;j<array.length;j++){
+            for(int i=0;i<array.length-j-1;i++){
+                if(array[i]>array[i+1]){
+                    int x=array[i];
+                    array[i]=array[i+1];
+                    array[i+1]=x;
                 }
             }
         }
         /*加强for循环输出结果*/
-        for (int y:arr) {
+        for (int y:array) {
             System.out.print(y+" ");
         }
         long time1=System.currentTimeMillis();
         System.out.println("冒泡排序结束！"+(time1-time0));
         /*归并排序*/
-        devide(arr);
-        for (int x:arr
+        devide(array);
+        for (int x:array
              ) {
             System.out.print(x+" ");
         }
         System.out.println((System.currentTimeMillis()-time1)+"消耗时间");
         /*快速排序*/
-        quick(arr,0,arr.length-1);
-        for (int x:arr
+        quick(array,0,array.length-1);
+        for (int x:array
                 ) {
             System.out.print(x+" ");
         }
